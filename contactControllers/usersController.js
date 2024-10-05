@@ -40,7 +40,7 @@ const signupUser = async (req, res) => {
       verificationToken,
     });
 
-    const verificationLink = `https://localhost:${PORT}/api/users/verify/${verificationToken}`;
+    const verificationLink = `http://localhost:${PORT}/api/users/verify/${verificationToken}`;
     await sendEmail({
       to: email,
       subject: "Verify your email address",
